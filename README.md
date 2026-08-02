@@ -1,191 +1,147 @@
-# TerraForge Framework
+
+# TerraForge Engine
 
 <p align="center">
+  <img src="assets/logo.png" width="220" alt="TerraForge Engine Logo">
+</p>
 
-![TerraForge Logo](icon.dds)
+<h2 align="center">
+A next-generation simulation framework for realistic worlds.
+</h2>
 
+<p align="center">
+TerraForge Engine brings advanced vehicle systems, construction,
+industrial simulation, and interactive gameplay into a unified framework.
 </p>
 
 <p align="center">
 
+<img src="https://img.shields.io/badge/Status-Active%20Development-orange?style=for-the-badge">
 <img src="https://img.shields.io/badge/Engine-GIANTS%20Engine%2010-green?style=for-the-badge">
-<img src="https://img.shields.io/badge/Game-Farming%20Simulator%2025-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Game-Farming%20Simulator%2025-yellow?style=for-the-badge">
 <img src="https://img.shields.io/badge/Language-Lua%205.4-blue?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge">
 
 </p>
 
 <p align="center">
 
-<img src="https://img.shields.io/github/license/YOURNAME/TerraForge-Framework?style=for-the-badge">
-<img src="https://img.shields.io/github/stars/YOURNAME/TerraForge-Framework?style=for-the-badge">
-<img src="https://img.shields.io/github/forks/YOURNAME/TerraForge-Framework?style=for-the-badge">
-<img src="https://img.shields.io/github/issues/YOURNAME/TerraForge-Framework?style=for-the-badge">
+<img src="https://img.shields.io/github/license/MrDeathLabs/TerraForge-Engine?style=for-the-badge">
+<img src="https://img.shields.io/github/stars/MrDeathLabs/TerraForge-Engine?style=for-the-badge">
+<img src="https://img.shields.io/github/issues/MrDeathLabs/TerraForge-Engine?style=for-the-badge">
+<img src="https://img.shields.io/github/last-commit/MrDeathLabs/TerraForge-Engine?style=for-the-badge">
 
 </p>
+---
 
-# TerraForge Framework
+# About TerraForge Engine
 
-**A next-generation simulation framework for Farming Simulator 25 and future simulation projects.**
+TerraForge Engine is a modular simulation framework designed to expand Farming Simulator 25 into a deeper, more realistic simulation experience.
 
-TerraForge is an open and modular framework designed to transform traditional farming simulation into a deeper, more immersive world simulation experience.
+The goal is to create a platform where developers can build advanced simulation systems including:
 
-The goal is not to replace the GIANTS Engine. TerraForge works alongside it, expanding gameplay systems with advanced interaction, realistic vehicle systems, maintenance, construction, economy, and world simulation.
+* Realistic vehicle systems
+* Interactive equipment
+* Construction operations
+* Industrial gameplay
+* Dynamic economies
+* Career systems
+* Utilities
+* Logistics
+* World simulation
+
+TerraForge is designed as a foundation, not just a single modification.
 
 ---
 
 # Vision
 
-TerraForge aims to create a living simulation ecosystem where every machine, tool, material, and system behaves naturally.
+Traditional simulation games simplify the world.
 
-The player is not just controlling equipment.
+TerraForge aims to make the world feel alive.
 
-The player becomes part of the world.
+Machines should:
 
-Examples:
+* Wear down
+* Require maintenance
+* Fail realistically
+* Need repairs
+* React to the environment
 
-* Inspecting and repairing machinery.
-* Connecting hydraulic hoses and electrical cables.
-* Maintaining vehicles.
-* Operating construction equipment.
-* Managing companies.
-* Building infrastructure.
-* Working with realistic tools.
-* Expanding industries.
-* Creating custom simulation experiences.
+Players should:
 
----
+* Use tools
+* Inspect equipment
+* Build infrastructure
+* Manage companies
+* Operate realistic systems
 
-# Features
+The goal:
 
-## Core Framework
-
-TerraForge provides the foundation required for large-scale simulation systems.
-
-Features:
-
-* Modular architecture
-* Service-based systems
-* Event framework
-* Save/load management
-* Multiplayer synchronization
-* Configuration system
-* Logging system
-* Debug tools
-* Addon support
-* Developer API
+> Create a living simulation platform where every system connects together.
 
 ---
 
-# Realistic Vehicle Systems
+# Core Features
 
-TerraForge expands vehicle simulation with additional systems.
+## 🚜 Advanced Vehicle Simulation
 
-Planned systems:
+TerraForge expands vehicle gameplay with deeper systems.
 
-## Engine
+Planned:
 
-* Engine temperature
-* Oil systems
-* Coolant systems
+* Engine simulation
 * Fuel systems
+* Cooling systems
+* Oil systems
+* Electrical systems
 * Battery systems
-* Starter systems
-* Turbo simulation
-* Engine wear
-
-## Transmission
-
-* Manual transmission support
-* Automatic systems
-* CVT support
-* Clutch simulation
-* Gear wear
-* Drivetrain behavior
-
-## Equipment
-
+* Transmission systems
 * Hydraulic systems
 * PTO systems
-* Attachment systems
-* Cable connections
-* Hose connections
-* Electrical connections
-
-## Maintenance
-
 * Component wear
 * Diagnostics
-* Replacement parts
 * Repairs
-* Service history
 
 ---
 
-# Interactive Control System
+## 🔧 Interactive Control System
 
-TerraForge introduces a universal interaction framework.
+A complete interaction framework.
 
 Players can interact with:
 
 * Doors
 * Hoods
 * Toolboxes
-* Switches
 * Controls
+* Switches
 * Attachments
 * Equipment
 * Tools
-* Objects
+* World objects
 
-Future interaction examples:
+Future systems:
 
-* Connect hydraulic hoses.
-* Attach PTO shafts.
-* Plug electrical connectors.
-* Inspect machine components.
-* Replace damaged parts.
-
----
-
-# Player Equipment System
-
-Players can physically use tools and equipment.
-
-Planned features:
-
-* Hand system
-* Tool carrying
-* Equipment storage
-* Tool belts
-* Backpacks
-* Safety equipment
-* Wearable items
-
-Tools:
-
-* Wrenches
-* Hammers
-* Chainsaws
-* Fuel cans
-* Diagnostic equipment
-* Welding equipment
-* Measuring tools
+* Connect hoses
+* Connect cables
+* Inspect machines
+* Replace parts
+* Operate controls manually
 
 ---
 
-# Construction Framework
+# 🏗 Construction Simulation
 
-TerraForge expands beyond farming into construction simulation.
+TerraForge expands beyond agriculture.
 
 Supported industries:
 
-* Road construction
+* Construction
 * Excavation
 * Utilities
-* Landscaping
 * Infrastructure
-* Building projects
+* Transportation
+* Manufacturing
 
 Equipment:
 
@@ -199,28 +155,30 @@ Equipment:
 
 Systems:
 
-* Construction jobs
-* Material requirements
+* Construction contracts
+* Materials
 * Equipment operation
-* Project progression
+* Job progression
 * Repairs
 * Logistics
 
 ---
 
-# World Simulation
+# 🌎 World Simulation
 
-TerraForge adds deeper simulation systems.
+TerraForge creates connected simulation systems.
 
 ## Economy
 
+Planned:
+
 * Dynamic markets
-* Businesses
+* Companies
 * Contracts
 * Loans
 * Insurance
 * Taxes
-* Companies
+* Business management
 
 ## Careers
 
@@ -236,14 +194,16 @@ Possible careers:
 
 ## Logistics
 
-* Freight
+Systems:
+
 * Warehouses
+* Freight
 * Supply chains
 * Transportation networks
 
 ---
 
-# Water and Utility Systems
+# 💧 Utility Systems
 
 Future systems:
 
@@ -254,149 +214,163 @@ Future systems:
 * Hoses
 * Irrigation
 * Water networks
-* Pressure simulation
+* Pressure systems
 
 ## Electrical
 
 * Generators
-* Power systems
-* Utility networks
-* Infrastructure repair
+* Power networks
+* Utility repair
+* Infrastructure
 
 ## Communications
 
-* Radios
-* Communication systems
-* Network infrastructure
+* Radio systems
+* Communication networks
+* Equipment tracking
 
 ---
 
-# Addon System
+# 🧩 Modular Architecture
 
-TerraForge is designed as a platform.
+TerraForge is built around a modular design.
 
-Other developers can create:
+```
+TerraForge Engine
 
-* Vehicles
-* Equipment
-* Industries
-* Tools
-* Jobs
-* Systems
-* Expansions
+├── Core
+│   ├── Module Loader
+│   ├── Event System
+│   ├── Save System
+│   ├── Network System
+│   └── Configuration
 
-without modifying the core framework.
+├── Simulation
+│   ├── Physics
+│   ├── Materials
+│   ├── Weather
+│   └── World
+
+├── Vehicles
+│   ├── Engine
+│   ├── Fuel
+│   ├── Hydraulic
+│   ├── Electrical
+│   └── Maintenance
+
+├── Gameplay
+│   ├── Interaction
+│   ├── Construction
+│   ├── Economy
+│   └── Jobs
+
+├── API
+
+├── SDK
+
+└── Addons
+```
+
+---
+
+# Developer API
+
+TerraForge will provide tools for developers.
+
+Planned:
+
+* Addon system
+* Custom vehicles
+* Custom jobs
+* Custom industries
+* Custom tools
+* Custom simulation modules
 
 Example:
 
-```
-MyAddon/
-
-├── addon.xml
-├── scripts/
-├── configs/
-├── assets/
-└── documentation/
-```
-
----
-
-# Project Structure
-
-```
-TerraForge/
-
-├── core/
-│   ├── events/
-│   ├── networking/
-│   ├── save/
-│   └── services/
-
-├── systems/
-│   ├── vehicles/
-│   ├── interaction/
-│   ├── construction/
-│   ├── economy/
-│   ├── farming/
-│   └── utilities/
-
-├── api/
-
-├── sdk/
-
-├── addons/
-
-├── docs/
-
-└── examples/
+```lua
+TerraForge.RegisterVehicle({
+    name = "exampleMachine",
+    systems = {
+        "engine",
+        "hydraulic",
+        "maintenance"
+    }
+})
 ```
 
 ---
 
-# Development Status
+# Development Roadmap
 
-TerraForge is currently in early development.
+## Version 0.1 - Foundation
 
 Current focus:
 
-* Core framework
+* Core architecture
 * Module system
-* API design
-* Save architecture
+* Event framework
+* Configuration
+* Logging
 * Developer tools
 
----
+## Version 0.2 - Interaction
 
-# Roadmap
-
-## Phase 1 - Foundation
-
-* Core framework
-* Module loader
-* Event system
-* Logging
-* Configuration
-* Save system
-
-## Phase 2 - Interaction
+Planned:
 
 * Player interaction
 * Tools
 * Objects
-* Equipment
+* Equipment systems
 * Connections
 
-## Phase 3 - Vehicle Simulation
+## Version 0.3 - Vehicle Systems
 
+Planned:
+
+* Vehicle components
 * Maintenance
 * Damage
-* Components
-* Advanced controls
+* Diagnostics
+* Repair systems
 
-## Phase 4 - Construction
+## Version 0.4 - Construction
 
-* Machinery
+Planned:
+
+* Construction jobs
 * Materials
-* Jobs
-* Projects
+* Heavy equipment
+* Infrastructure
 
-## Phase 5 - World Simulation
+## Version 1.0 - Simulation Platform
 
-* Economy
-* Companies
-* Careers
-* Utilities
-* AI
+Planned:
+
+* Complete framework
+* Multiplayer support
+* SDK
+* Addon ecosystem
 
 ---
 
-# Requirements
+# Repository Structure
 
-Currently:
+```
+TerraForge-Engine
 
-* Farming Simulator 25
-* GIANTS Engine 10
-* Lua scripting support
+├── core/
+├── systems/
+├── vehicles/
+├── construction/
+├── economy/
+├── interaction/
+├── api/
+├── sdk/
+├── addons/
+├── docs/
+└── examples/
+```
 
 ---
 
@@ -404,53 +378,73 @@ Currently:
 
 Contributions are welcome.
 
+Development branches:
+
+```
+feature/new-system
+feature/vehicle-physics
+feature/construction
+bugfix/save-system
+release/version
+```
+
 Before contributing:
 
-1. Read the documentation.
-2. Create a feature branch.
-3. Submit a pull request.
-4. Explain changes clearly.
+1. Fork the repository
+2. Create a branch
+3. Make changes
+4. Submit a Pull Request
 
-Branch example:
+---
 
-```
-feature/hydraulic-system
-feature/vehicle-maintenance
-bugfix/save-system
-```
+# Development Tools
+
+Planned:
+
+* Documentation website
+* API reference
+* Mod creator tools
+* Debug tools
+* Testing framework
+
+---
+
+# Project Information
+
+Repository:
+
+https://github.com/MrDeathLabs/TerraForge-Engine
+
+Developer:
+
+MrDeathLabs
 
 ---
 
 # License
 
-License information will be added before release.
-
----
-
-# Community
-
-TerraForge is built for developers, modders, and simulation enthusiasts who want deeper and more realistic experiences.
-
-The goal is to create a foundation where the community can build new industries, machines, and worlds together.
+License information will be added before public release.
 
 ---
 
 # Disclaimer
 
-TerraForge is an independent project and is not affiliated with GIANTS Software.
+TerraForge Engine is an independent project.
 
 Farming Simulator and GIANTS Engine are trademarks of GIANTS Software.
 
----
-
-# Support
-
-For issues, feature requests, and development discussions:
-
-* GitHub Issues
-* GitHub Discussions
-* Community Discord (coming soon)
+TerraForge Engine is not affiliated with GIANTS Software.
 
 ---
 
-**TerraForge Framework — Building the future of simulation.**
+<p align="center">
+
+<strong>
+TerraForge Engine
+</strong>
+
+<br>
+
+Building the future of simulation.
+
+</p>
