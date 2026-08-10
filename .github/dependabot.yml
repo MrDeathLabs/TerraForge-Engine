@@ -1,206 +1,31 @@
+# Dependabot configuration
+# MrDeathLabs / TerraForge-Engine
+
 version: 2
+
 updates:
-  - package-ecosystem: nuget
-    directory: /
+  # .NET / C# dependencies
+  - package-ecosystem: "nuget"
+    directory: "/"
     schedule:
-      interval: weekly
-      day: monday
-      time: '04:00'
-      timezone: America/Chicago
-    open-pull-requests-limit: 10
-    versioning-strategy: increase
-    labels:
-      - dependencies
-      - nuget
-      - csharp
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      dotnet-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: weekly
-      day: monday
-      time: '04:30'
-      timezone: America/Chicago
-    open-pull-requests-limit: 10
-    versioning-strategy: increase
-    labels:
-      - dependencies
-      - npm
-      - javascript
-      - typescript
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      npm-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: pip
-    directory: /
-    schedule:
-      interval: weekly
-      day: tuesday
-      time: '04:00'
-      timezone: America/Chicago
+      interval: "weekly"
     open-pull-requests-limit: 10
     labels:
-      - dependencies
-      - python
+      - "dependencies"
+      - "nuget"
+      - "csharp"
     commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      python-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: docker
-    directory: /
+      prefix: "deps"
+
+  # GitHub Actions dependencies
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: weekly
-      day: tuesday
-      time: '04:30'
-      timezone: America/Chicago
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-      - docker
-      - infrastructure
-    commit-message:
-      prefix: deps
-      include: scope
-  - package-ecosystem: github-actions
-    directory: /
-    schedule:
-      interval: weekly
-      day: wednesday
-      time: '04:00'
-      timezone: America/Chicago
+      interval: "weekly"
     open-pull-requests-limit: 10
     labels:
-      - dependencies
-      - github-actions
-      - ci
+      - "dependencies"
+      - "github-actions"
+      - "ci"
     commit-message:
-      prefix: ci
-      include: scope
-    groups:
-      github-actions:
-        patterns:
-          - '*'
-  - package-ecosystem: terraform
-    directory: /
-    schedule:
-      interval: weekly
-      day: wednesday
-      time: '04:30'
-      timezone: America/Chicago
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-      - terraform
-      - infrastructure
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      terraform-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: gomod
-    directory: /
-    schedule:
-      interval: weekly
-      day: thursday
-      time: '04:00'
-      timezone: America/Chicago
-    open-pull-requests-limit: 10
-    labels:
-      - dependencies
-      - go
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      go-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: composer
-    directory: /
-    schedule:
-      interval: weekly
-      day: thursday
-      time: '04:30'
-      timezone: America/Chicago
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-      - php
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      php-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: gradle
-    directory: /
-    schedule:
-      interval: weekly
-      day: friday
-      time: '04:00'
-      timezone: America/Chicago
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-      - gradle
-      - java
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      gradle-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: maven
-    directory: /
-    schedule:
-      interval: weekly
-      day: friday
-      time: '04:30'
-      timezone: America/Chicago
-    open-pull-requests-limit: 5
-    labels:
-      - dependencies
-      - maven
-      - java
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      maven-dependencies:
-        patterns:
-          - '*'
-  - package-ecosystem: cargo
-    directory: /
-    schedule:
-      interval: weekly
-      day: saturday
-      time: '04:00'
-      timezone: America/Chicago
-    open-pull-requests-limit: 10
-    labels:
-      - dependencies
-      - rust
-    commit-message:
-      prefix: deps
-      include: scope
-    groups:
-      cargo-dependencies:
-        patterns:
-          - '*'
+      prefix: "ci"
