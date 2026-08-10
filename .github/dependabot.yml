@@ -1,314 +1,268 @@
 # Dependabot configuration
-
 # TerraForge Engine / MrDeathLabs
-
 #
-
 # Dependabot automatically checks for dependency updates,
-
 # security fixes, and GitHub Actions updates.
 
 version: 2
 
 updates:
 
-# ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # .NET / C# / NuGet
+  # ─────────────────────────────────────────────
 
-# .NET / C# / NuGet
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "nuget"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "monday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  versioning-strategy: "increase"
-  labels:
-
-  * "dependencies"
-  * "nuget"
-  * "csharp"
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    versioning-strategy: "increase"
+    labels:
+      - "dependencies"
+      - "nuget"
+      - "csharp"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    dotnet-dependencies:
-    patterns:
+      dotnet-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Node.js / JavaScript / TypeScript
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Node.js / JavaScript / TypeScript
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "npm"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "monday"
-  time: "04:30"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  versioning-strategy: "increase"
-  labels:
-
-  * "dependencies"
-  * "npm"
-  * "javascript"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:30"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    versioning-strategy: "increase"
+    labels:
+      - "dependencies"
+      - "npm"
+      - "javascript"
+      - "typescript"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    npm-dependencies:
-    patterns:
+      npm-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Python
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Python
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "pip"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "tuesday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  labels:
-
-  * "dependencies"
-  * "python"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "python"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    python-dependencies:
-    patterns:
+      python-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Docker
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Docker
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "docker"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "tuesday"
-  time: "04:30"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 5
-  labels:
-
-  * "dependencies"
-  * "docker"
-  * "infrastructure"
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+      time: "04:30"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "docker"
+      - "infrastructure"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
 
-# ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # GitHub Actions
+  # ─────────────────────────────────────────────
 
-# GitHub Actions
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "github-actions"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "wednesday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  labels:
-
-  * "dependencies"
-  * "github-actions"
-  * "ci"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "ci"
     commit-message:
-    prefix: "ci"
-    include: "scope"
+      prefix: "ci"
+      include: "scope"
     groups:
-    github-actions:
-    patterns:
+      github-actions:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Terraform
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Terraform
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "terraform"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "wednesday"
-  time: "04:30"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 5
-  labels:
-
-  * "dependencies"
-  * "terraform"
-  * "infrastructure"
+  - package-ecosystem: "terraform"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+      time: "04:30"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "terraform"
+      - "infrastructure"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    terraform-dependencies:
-    patterns:
+      terraform-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Go
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Go
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "gomod"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "thursday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  labels:
-
-  * "dependencies"
-  * "go"
+  - package-ecosystem: "gomod"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "go"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    go-dependencies:
-    patterns:
+      go-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Composer / PHP
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Composer / PHP
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "composer"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "thursday"
-  time: "04:30"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 5
-  labels:
-
-  * "dependencies"
-  * "php"
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "04:30"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "php"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    php-dependencies:
-    patterns:
+      php-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Gradle / Android / Java / Kotlin
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Gradle / Android / Java / Kotlin
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "gradle"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "friday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 5
-  labels:
-
-  * "dependencies"
-  * "gradle"
-  * "java"
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "gradle"
+      - "java"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    gradle-dependencies:
-    patterns:
+      gradle-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Maven / Java
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Maven / Java
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "maven"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "friday"
-  time: "04:30"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 5
-  labels:
-
-  * "dependencies"
-  * "maven"
-  * "java"
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "friday"
+      time: "04:30"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "maven"
+      - "java"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    maven-dependencies:
-    patterns:
+      maven-dependencies:
+        patterns:
+          - "*"
 
-    * "*"
+  # ─────────────────────────────────────────────
+  # Cargo / Rust
+  # ─────────────────────────────────────────────
 
-# ─────────────────────────────────────────────
-
-# Cargo / Rust
-
-# ─────────────────────────────────────────────
-
-* package-ecosystem: "cargo"
-  directory: "/"
-  schedule:
-  interval: "weekly"
-  day: "saturday"
-  time: "04:00"
-  timezone: "America/Chicago"
-  open-pull-requests-limit: 10
-  labels:
-
-  * "dependencies"
-  * "rust"
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "04:00"
+      timezone: "America/Chicago"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "rust"
     commit-message:
-    prefix: "deps"
-    include: "scope"
+      prefix: "deps"
+      include: "scope"
     groups:
-    cargo-dependencies:
-    patterns:
-
-    * "*"
+      cargo-dependencies:
+        patterns:
+          - "*"
