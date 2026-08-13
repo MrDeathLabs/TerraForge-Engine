@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l10n>
+    <texts>
+
+        <text name="interaction_grab">
+            <en>Grab Object</en>
+        </text>
+
+        <text name="interaction_openDoor">
+            <en>Open Door</en>
+        </text>
+
+        <text name="interaction_enterVehicle">
+            <en>Enter Vehicle</en>
+        </text>
+
+    </texts>
+</l10n>
