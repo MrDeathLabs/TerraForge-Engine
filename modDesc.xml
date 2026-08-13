@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="80">
+
+    <!-- ========================================================= -->
+    <!-- TerraForge Engine                                        -->
+    <!-- ========================================================= -->
+
+    <author>MrDeathLabs</author>
+
+    <version major="0" minor="1" patch="0" build="0"/>
+
+    <title>
+        <en>TerraForge Engine</en>
+        <de>TerraForge Engine</de>
+        <fr>TerraForge Engine</fr>
+    </title>
+
+    <description>
+        <en>
+            TerraForge Engine is a modular simulation framework for
+            Farming Simulator 25 focused on realistic vehicles,
+            interactive equipment, construction, physics,
+            maintenance, utilities, economy, logistics, world
+            simulation, and connected gameplay systems.
+        </en>
+
+        <de>
+            TerraForge Engine ist ein modulares Simulationsframework
+            für Farming Simulator 25 mit Fokus auf realistische
+            Fahrzeuge, interaktive Ausrüstung, Bauwesen, Physik,
+            Wartung, Versorgungssysteme, Wirtschaft, Logistik und
+            verbundene Spielsysteme.
+        </de>
+
+        <fr>
+            TerraForge Engine est un framework de simulation modulaire
+            pour Farming Simulator 25 axé sur les véhicules réalistes,
+            les équipements interactifs, la construction, la physique,
+            la maintenance, les services publics, l'économie et la
+            logistique.
+        </fr>
+    </description>
+
+
+    <!-- ========================================================= -->
+    <!-- Branding                                                   -->
+    <!-- ========================================================= -->
+
+    <iconFilename>icon.dds</iconFilename>
+
+
+    <!-- ========================================================= -->
+    <!-- Multiplayer                                                -->
+    <!-- ========================================================= -->
+
+    <multiplayer supported="true"/>
+
+
+    <!-- ========================================================= -->
+    <!-- Script Loading                                             -->
+    <!-- ========================================================= -->
+
+    <extraSourceFiles>
+
+        <!-- Core -->
+        <sourceFile filename="scripts/core/Config.lua"/>
+        <sourceFile filename="scripts/core/Logger.lua"/>
+        <sourceFile filename="scripts/core/EventSystem.lua"/>
+        <sourceFile filename="scripts/core/ModuleLoader.lua"/>
+        <sourceFile filename="scripts/core/ServiceManager.lua"/>
+        <sourceFile filename="scripts/core/UpdateManager.lua"/>
+        <sourceFile filename="scripts/core/NetworkManager.lua"/>
+        <sourceFile filename="scripts/core/SaveSystem.lua"/>
+        <sourceFile filename="scripts/core/TerraCoreManager.lua"/>
+
+
+        <!-- Services -->
+        <sourceFile filename="scripts/services/TimeService.lua"/>
+        <sourceFile filename="scripts/services/EventService.lua"/>
+        <sourceFile filename="scripts/services/WeatherService.lua"/>
+        <sourceFile filename="scripts/services/EconomyService.lua"/>
+        <sourceFile filename="scripts/services/NotificationService.lua"/>
+        <sourceFile filename="scripts/services/PermissionService.lua"/>
+        <sourceFile filename="scripts/services/StatisticsService.lua"/>
+
+
+        <!-- Registry -->
+        <sourceFile filename="scripts/registry/VehicleRegistry.lua"/>
+        <sourceFile filename="scripts/registry/ObjectRegistry.lua"/>
+        <sourceFile filename="scripts/registry/ItemRegistry.lua"/>
+        <sourceFile filename="scripts/registry/MaterialRegistry.lua"/>
+        <sourceFile filename="scripts/registry/CropRegistry.lua"/>
+        <sourceFile filename="scripts/registry/JobRegistry.lua"/>
+
+
+        <!-- API -->
+        <sourceFile filename="scripts/api/VehicleAPI.lua"/>
+        <sourceFile filename="scripts/api/ObjectAPI.lua"/>
+        <sourceFile filename="scripts/api/PlayerAPI.lua"/>
+        <sourceFile filename="scripts/api/InventoryAPI.lua"/>
+        <sourceFile filename="scripts/api/EconomyAPI.lua"/>
+        <sourceFile filename="scripts/api/JobAPI.lua"/>
+        <sourceFile filename="scripts/api/TerrainAPI.lua"/>
+        <sourceFile filename="scripts/api/InteractionAPI.lua"/>
+
+
+        <!-- Player -->
+        <sourceFile filename="scripts/player/PlayerManager.lua"/>
+        <sourceFile filename="scripts/player/Inventory.lua"/>
+        <sourceFile filename="scripts/player/Jobs.lua"/>
+        <sourceFile filename="scripts/player/Skills.lua"/>
+
+
+        <!-- Vehicles -->
+        <sourceFile filename="scripts/vehicles/VehicleSystem.lua"/>
+        <sourceFile filename="scripts/vehicles/ControlSystem.lua"/>
+        <sourceFile filename="scripts/vehicles/VehicleEntry.lua"/>
+        <sourceFile filename="scripts/vehicles/VehicleInteraction.lua"/>
+        <sourceFile filename="scripts/vehicles/DoorSystem.lua"/>
+        <sourceFile filename="scripts/vehicles/SeatSystem.lua"/>
+
+
+        <!-- Physics -->
+        <sourceFile filename="scripts/physics/PhysicsManager.lua"/>
+        <sourceFile filename="scripts/physics/VehiclePhysics.lua"/>
+        <sourceFile filename="scripts/physics/ForceSystem.lua"/>
+        <sourceFile filename="scripts/physics/LoadSystem.lua"/>
+        <sourceFile filename="scripts/physics/WeightSystem.lua"/>
+        <sourceFile filename="scripts/physics/CollisionSystem.lua"/>
+        <sourceFile filename="scripts/physics/ObjectPhysics.lua"/>
+        <sourceFile filename="scripts/physics/MaterialPhysics.lua"/>
+        <sourceFile filename="scripts/physics/FluidPhysics.lua"/>
+        <sourceFile filename="scripts/physics/CablePhysics.lua"/>
+        <sourceFile filename="scripts/physics/HosePhysics.lua"/>
+
+
+        <!-- Equipment -->
+        <sourceFile filename="scripts/equipment/AttachmentSystem.lua"/>
+        <sourceFile filename="scripts/equipment/HitchSystem.lua"/>
+        <sourceFile filename="scripts/equipment/PTOSystem.lua"/>
+        <sourceFile filename="scripts/equipment/HoseSystem.lua"/>
+        <sourceFile filename="scripts/equipment/CableSystem.lua"/>
+        <sourceFile filename="scripts/equipment/DamageSystem.lua"/>
+        <sourceFile filename="scripts/equipment/Maintenance.lua"/>
+
+
+        <!-- Interaction -->
+        <sourceFile filename="scripts/interaction/InteractionManager.lua"/>
+        <sourceFile filename="scripts/interaction/RaycastSystem.lua"/>
+        <sourceFile filename="scripts/interaction/ObjectInteraction.lua"/>
+        <sourceFile filename="scripts/interaction/PhysicalInteraction.lua"/>
+        <sourceFile filename="scripts/interaction/HandController.lua"/>
+        <sourceFile filename="scripts/interaction/GrabSystem.lua"/>
+        <sourceFile filename="scripts/interaction/SnapSystem.lua"/>
+
+
+        <!-- Objects -->
+        <sourceFile filename="scripts/objects/CarryableObject.lua"/>
+        <sourceFile filename="scripts/objects/StorageSystem.lua"/>
+
+
+        <!-- Tools -->
+        <sourceFile filename="scripts/tools/ToolSystem.lua"/>
+
+
+        <!-- Construction -->
+        <sourceFile filename="scripts/construction/BlueprintSystem.lua"/>
+        <sourceFile filename="scripts/construction/BuildingSystem.lua"/>
+        <sourceFile filename="scripts/construction/ConstructionProgress.lua"/>
+        <sourceFile filename="scripts/construction/MaterialRequirement.lua"/>
+        <sourceFile filename="scripts/construction/RepairSystem.lua"/>
+
+
+        <!-- Farming -->
+        <sourceFile filename="scripts/farming/AnimalSystem.lua"/>
+        <sourceFile filename="scripts/farming/CropSystem.lua"/>
+        <sourceFile filename="scripts/farming/DiseaseSystem.lua"/>
+        <sourceFile filename="scripts/farming/GrowthSystem.lua"/>
+        <sourceFile filename="scripts/farming/HarvestSystem.lua"/>
+        <sourceFile filename="scripts/farming/SoilSystem.lua"/>
+
+
+        <!-- Animals -->
+        <sourceFile filename="scripts/animals/AnimalAI.lua"/>
+        <sourceFile filename="scripts/animals/AnimalNeeds.lua"/>
+        <sourceFile filename="scripts/animals/BreedingSystem.lua"/>
+        <sourceFile filename="scripts/animals/WildlifeSystem.lua"/>
+
+
+        <!-- Economy -->
+        <sourceFile filename="scripts/economy/Economy.lua"/>
+        <sourceFile filename="scripts/economy/BankingSystem.lua"/>
+        <sourceFile filename="scripts/economy/BusinessManagement.lua"/>
+        <sourceFile filename="scripts/economy/CompanySystem.lua"/>
+        <sourceFile filename="scripts/economy/ContractSystem.lua"/>
+        <sourceFile filename="scripts/economy/InsuranceSystem.lua"/>
+        <sourceFile filename="scripts/economy/LoanSystem.lua"/>
+        <sourceFile filename="scripts/economy/TaxSystem.lua"/>
+
+
+        <!-- Jobs -->
+        <sourceFile filename="scripts/jobs/FarmerJob.lua"/>
+        <sourceFile filename="scripts/jobs/ConstructionJob.lua"/>
+        <sourceFile filename="scripts/jobs/MechanicJob.lua"/>
+        <sourceFile filename="scripts/jobs/LinemanJob.lua"/>
+        <sourceFile filename="scripts/jobs/TransportJob.lua"/>
+
+
+        <!-- Logistics -->
+        <sourceFile filename="scripts/logistics/DeliverySystem.lua"/>
+        <sourceFile filename="scripts/logistics/FreightSystem.lua"/>
+        <sourceFile filename="scripts/logistics/SupplyChain.lua"/>
+        <sourceFile filename="scripts/logistics/TransportNetwork.lua"/>
+        <sourceFile filename="scripts/logistics/WarehouseSystem.lua"/>
+
+
+        <!-- Utilities -->
+        <sourceFile filename="scripts/utilities/FuelSystem.lua"/>
+        <sourceFile filename="scripts/utilities/WaterSystem.lua"/>
+        <sourceFile filename="scripts/utilities/PowerGrid.lua"/>
+        <sourceFile filename="scripts/utilities/UtilityRepair.lua"/>
+        <sourceFile filename="scripts/utilities/CommunicationSystem.lua"/>
+
+
+        <!-- Terrain -->
+        <sourceFile filename="scripts/terrain/CompactionSystem.lua"/>
+        <sourceFile filename="scripts/terrain/DiggingSystem.lua"/>
+        <sourceFile filename="scripts/terrain/ExcavationSystem.lua"/>
+        <sourceFile filename="scripts/terrain/MaterialPileSystem.lua"/>
+        <sourceFile filename="scripts/terrain/SoilLayers.lua"/>
+        <sourceFile filename="scripts/terrain/TerrainEdit.lua"/>
+
+
+        <!-- World -->
+        <sourceFile filename="scripts/world/WorldManager.lua"/>
+        <sourceFile filename="scripts/world/TerrainSystem.lua"/>
+        <sourceFile filename="scripts/world/MaterialSystem.lua"/>
+        <sourceFile filename="scripts/world/WeatherSystem.lua"/>
+
+
+        <!-- World Services -->
+        <sourceFile filename="scripts/world/services/RegionService.lua"/>
+        <sourceFile filename="scripts/world/services/RoadService.lua"/>
+        <sourceFile filename="scripts/world/services/TimeService.lua"/>
+        <sourceFile filename="scripts/world/services/UtilityService.lua"/>
+        <sourceFile filename="scripts/world/services/WeatherService.lua"/>
+
+
+        <!-- Weather -->
+        <sourceFile filename="scripts/weather/DisasterSystem.lua"/>
+        <sourceFile filename="scripts/weather/FloodSystem.lua"/>
+        <sourceFile filename="scripts/weather/SnowSystem.lua"/>
+        <sourceFile filename="scripts/weather/StormSystem.lua"/>
+
+
+        <!-- Simulation -->
+        <sourceFile filename="scripts/simulation/EconomySimulation.lua"/>
+        <sourceFile filename="scripts/simulation/PopulationSystem.lua"/>
+        <sourceFile filename="scripts/simulation/RandomEventSystem.lua"/>
+        <sourceFile filename="scripts/simulation/WeatherSimulation.lua"/>
+        <sourceFile filename="scripts/simulation/WorldMemory.lua"/>
+
+
+        <!-- Society -->
+        <sourceFile filename="scripts/society/NPCSystem.lua"/>
+        <sourceFile filename="scripts/society/RelationshipSystem.lua"/>
+        <sourceFile filename="scripts/society/ReputationSystem.lua"/>
+        <sourceFile filename="scripts/society/TownSystem.lua"/>
+
+
+        <!-- AI -->
+        <sourceFile filename="scripts/ai/CivilianSystem.lua"/>
+        <sourceFile filename="scripts/ai/TrafficAI.lua"/>
+        <sourceFile filename="scripts/ai/WorkerAI.lua"/>
+
+
+        <!-- Survival -->
+        <sourceFile filename="scripts/survival/FatigueSystem.lua"/>
+        <sourceFile filename="scripts/survival/HealthSystem.lua"/>
+        <sourceFile filename="scripts/survival/InjurySystem.lua"/>
+        <sourceFile filename="scripts/survival/NeedsSystem.lua"/>
+        <sourceFile filename="scripts/survival/WeatherExposure.lua"/>
+
+
+        <!-- Research -->
+        <sourceFile filename="scripts/research/InnovationSystem.lua"/>
+        <sourceFile filename="scripts/research/TechnologyTree.lua"/>
+        <sourceFile filename="scripts/research/UpgradeSystem.lua"/>
+
+
+        <!-- Prefabs -->
+        <sourceFile filename="scripts/prefab/PrefabLoader.lua"/>
+        <sourceFile filename="scripts/prefab/PrefabManager.lua"/>
+        <sourceFile filename="scripts/prefab/VehiclePrefab.lua"/>
+        <sourceFile filename="scripts/prefab/ObjectPrefab.lua"/>
+        <sourceFile filename="scripts/prefab/BuildingPrefab.lua"/>
+        <sourceFile filename="scripts/prefab/ToolPrefab.lua"/>
+
+
+        <!-- Pipeline -->
+        <sourceFile filename="scripts/pipeline/AssetLoader.lua"/>
+        <sourceFile filename="scripts/pipeline/DataPipeline.lua"/>
+        <sourceFile filename="scripts/pipeline/ModelManager.lua"/>
+        <sourceFile filename="scripts/pipeline/ResourceManager.lua"/>
+        <sourceFile filename="scripts/pipeline/TextureManager.lua"/>
+
+
+        <!-- Persistence -->
+        <sourceFile filename="scripts/persistence/PersistenceManager.lua"/>
+        <sourceFile filename="scripts/persistence/PlayerSave.lua"/>
+        <sourceFile filename="scripts/persistence/VehicleSave.lua"/>
+        <sourceFile filename="scripts/persistence/InventorySave.lua"/>
+        <sourceFile filename="scripts/persistence/CompanySave.lua"/>
+        <sourceFile filename="scripts/persistence/JobSave.lua"/>
+        <sourceFile filename="scripts/persistence/ObjectSave.lua"/>
+        <sourceFile filename="scripts/persistence/TerrainSave.lua"/>
+        <sourceFile filename="scripts/persistence/WorldSave.lua"/>
+
+
+        <!-- Multiplayer -->
+        <sourceFile filename="scripts/multiplayer/NetworkManager.lua"/>
+        <sourceFile filename="scripts/multiplayer/InteractionEvents.lua"/>
+
+
+        <!-- Particles -->
+        <sourceFile filename="scripts/particles/ParticleManager.lua"/>
+        <sourceFile filename="scripts/particles/DirtEffect.lua"/>
+        <sourceFile filename="scripts/particles/DustSystem.lua"/>
+        <sourceFile filename="scripts/particles/RainEffect.lua"/>
+        <sourceFile filename="scripts/particles/SmokeEffect.lua"/>
+        <sourceFile filename="scripts/particles/SparkEffect.lua"/>
+
+
+        <!-- UI -->
+        <sourceFile filename="scripts/ui/InteractionHUD.lua"/>
+        <sourceFile filename="scripts/ui/Menu.lua"/>
+
+
+        <!-- Development -->
+        <sourceFile filename="scripts/dev/DebugCommands.lua"/>
+        <sourceFile filename="scripts/dev/DebugMenu.lua"/>
+        <sourceFile filename="scripts/dev/PerformanceMonitor.lua"/>
+        <sourceFile filename="scripts/dev/SaveInspector.lua"/>
+        <sourceFile filename="scripts/dev/TestSystem.lua"/>
+
+
+        <!-- Addons -->
+        <sourceFile filename="addons/exampleAddon.lua"/>
+
+    </extraSourceFiles>
+
+
+    <!-- ========================================================= -->
+    <!-- Localization                                               -->
+    <!-- ========================================================= -->
+
+    <l10n filenamePrefix="l10n/l10n"/>
+
+
+    <!-- ========================================================= -->
+    <!-- Data                                                        -->
+    <!-- ========================================================= -->
+
+    <!-- TerraForge configuration/data files are loaded by the
+         TerraCore framework rather than directly by modDesc. -->
+
+
+    <!-- ========================================================= -->
+    <!-- Multiplayer Events                                         -->
+    <!-- ========================================================= -->
+
+    <!-- Network event registration is handled by the TerraForge
+         NetworkManager and EventSystem. -->
+
+
+    <!-- ========================================================= -->
+    <!-- TerraForge Metadata                                         -->
+    <!-- ========================================================= -->
+
+    <updateOverlayFilename>icon.dds</updateOverlayFilename>
+
+
+</modDesc>
